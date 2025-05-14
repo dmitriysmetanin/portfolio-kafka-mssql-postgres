@@ -1,0 +1,19 @@
+{
+    "name": "mssql-connector",
+    "config": {
+      "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector",
+      "tasks.max": "1",
+      "database.hostname": "sql-server-express",
+      "database.port": "1433",
+      "database.user": "dmitriy",
+      "database.password": "Idolprofit11!",
+      "database.dbname": "source",
+      "database.server.name": "mssqlserver",
+      "table.include.list": "dbo.hub_user",
+      "database.history.kafka.bootstrap.servers": "kafka:9092",
+      "database.history.kafka.topic": "schema-changes.inventory",
+      "include.schema.changes": "true",
+      "snapshot.mode": "schema_only",
+      "poll.interval.ms": "5000"
+    }
+  }

@@ -1,0 +1,16 @@
+{
+    "name": "mssql-connector",
+    "config": {
+      "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector",
+      "tasks.max": "1",
+      "database.hostname": "sql-server-express",
+      "database.port": "1433",
+      "database.user": "sa",
+      "database.password": "Idolprofit11",
+      "database.dbname": "source",
+      "database.server.name": "mssqlserver",
+      "table.whitelist": "dbo.hub_user",
+      "database.history.kafka.bootstrap.servers": "kafka:9092",
+      "database.history.kafka.topic": "schema-changes.mssql"
+    }
+  }

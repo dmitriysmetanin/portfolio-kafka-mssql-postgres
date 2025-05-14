@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  db:
+    image: postgres
+    container_name: pg-dwh
+    shm_size: 6gb
+    environment:
+      POSTGRES_DB: "habrdb"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"

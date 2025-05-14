@@ -1,0 +1,19 @@
+{
+    "name": "kafka-postgresql-sink",
+    "config": {
+      "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+      "tasks.max": "1",
+      "topics": "mssqlserver.dbo.hub_user",
+      "connection.url": "jdbc:postgresql://172.19.0.4:5432/exampledb",
+      "connection.user": "postgres",
+      "connection.password": "Idolprofit11",
+      "auto.create": "false",
+      "insert.mode": "upsert",
+      "pk.mode": "record_value",
+      "pk.fields": "id",
+      "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+      "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+      "key.converter.schemas.enable": "false",
+      "value.converter.schemas.enable": "false"
+    }
+  }
